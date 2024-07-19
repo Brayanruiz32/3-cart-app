@@ -1,0 +1,11 @@
+<h2>Carro de compras</h2>
+<catalog [products]="products" (productEventEmitter)="onAddCart($event)"></catalog>
+
+@if (items.length >0) {
+    <cart [items]="items" (idProductEventEmitter)="onDeleteCart($event)" [total]="total"></cart>
+
+} @else{
+    <div class=" alert alert-warning">
+        No hay nada en el carrito de compras
+    </div>
+}
